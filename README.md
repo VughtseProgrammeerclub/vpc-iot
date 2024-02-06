@@ -44,17 +44,19 @@ Dit is het programma van de cursus Smart Home van de Vughtse Programmeerclub.
 
 
 ## Hardwarelijst:
-Raspberry Pi Pico W - RP2040
-MakePico ESP32-D0WDQ6 Development Board met Wi-Fi en Bluetooth
-Micro USB USB-A Kabel - 30cm
-DHT22 Thermometer Temperatuur en Vochtigheids Sensor Module met Kabels
-Winsen MH-Z19C CO2 Sensor met Kabel
-Kabel voor Winsen MH-Z19 - Molex PicoBlade 7p naar DuPont 7p Compatible - 15cm
-5V relais 1-channel hoog-actief
-RJ12 naar 6 Pins Dupont-Jumper Adapter - P1 Kabel Compatible
-Breadboard 400 points (in 2 delen)
+* Raspberry Pi Pico W - RP2040
+* MakePico ESP32-D0WDQ6 Development Board met Wi-Fi en Bluetooth
+* Micro USB USB-A Kabel - 30cm
+* DHT22 Thermometer Temperatuur en Vochtigheids Sensor Module met Kabels
+* Winsen MH-Z19C CO2 Sensor met Kabel
+* Kabel voor Winsen MH-Z19 - Molex PicoBlade 7p naar DuPont 7p Compatible - 15cm
+* 5V relais 1-channel hoog-actief
+* RJ12 naar 6 Pins Dupont-Jumper Adapter - P1 Kabel Compatible
+* Breadboard 400 points (in 2 delen)
 
-DuPont Jumper draad Male-Male 10cm 10 draden
-DuPont Jumper draad Female-Male 10cm 10 draden
-1x Wago doorverbinder
-2x Wago 3 punts verdeelblok
+* DuPont Jumper draad Male-Male 10cm 10 draden
+* DuPont Jumper draad Female-Male 10cm 10 draden
+* 1x Wago doorverbinder
+* 2x Wago 3 punts verdeelblok
+
+* Stekker blok met aansluitingen voor het relais verwachten we voor de 2e sessie binnen te hebben
