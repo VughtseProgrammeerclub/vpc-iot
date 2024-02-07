@@ -29,4 +29,4 @@ Als laatste de praktische zaken:
 2. Het cursus materiaal is te vinden op https://github.com/VughtseProgrammeerclub/vpc-iot/
 3. Om de communicatie te vergemakkelijken worden alle deelnemers toegevoegd aan de VPC Berichten WhatsApp groep. Deze groep bevat aankondigingen over de cursusavonden, maar mag ook gebruikt worden om onderling vragen te stellen.
 
-De volgende sessie is dinsdag 20 februari om 20:00 in DePetrus.
+De volgende cursusavond is dinsdag 20 februari om 20:00 in DePetrus. Mocht je niet kunnen wachten, dan staat het eerste materiaal voor avond 2 al online: [introductie Raspberry Pi Pico met Thonny](../cursusavond2/introductie-raspberry-pi-pico-met-thonny.md).
