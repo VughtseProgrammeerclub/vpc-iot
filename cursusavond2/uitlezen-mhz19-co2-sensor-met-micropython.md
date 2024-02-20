@@ -38,25 +38,25 @@ Dat ziet er dan als volgt uit:
 ## Een library uploaden naar de Raspberry Pi Pico W
 In dit programma maken we gebruik van functies die niet standaard beschikbaar zijn op de Raspberry Pi Pico W. Een manier om deze functies toch beschikbaar te maken is om ze op de Raspberry Pi Pico W te plaatsen. Dat gaat als volgt:
 
-* Download [`mhz19.py`](code/mhz19.py). Klik rechtsboven op het Download icoontje ![GitHub download icon](images/github-download.png).
+1. Download [`mhz19.py`](code/mhz19.py). Klik rechtsboven op het Download icoontje ![GitHub download icon](images/github-download.png).
 
-* In Thonnie, klik bovenin op "Weergave" en vink "Bestanden" aan. Je ziet nu zowel de bestanden op je eigen computer als op de Raspberry Pi Pico W.
+2. In Thonny, klik bovenin op "Weergave" en vink "Bestanden" aan. Je ziet nu zowel de bestanden op je eigen computer als op de Raspberry Pi Pico W.
 
   ![Openen van het Bestandenpaneel in Thonny](images/thonny-weergave-bestanden.png)
-* Open de map waar `mhz19.py` staat.
+3. Open de map waar `mhz19.py` staat.
 
-  ![Bestandenpaneel van Thonnie](images/thonny-bestandenpaneel.png)
+  ![Bestandenpaneel van Thonny](images/thonny-bestandenpaneel.png)
 
-* Klik met de rechter muisknop op het bestand `mhz19.py` en selecteer "Uploaden naar /"
+4. Klik met de rechter muisknop op het bestand `mhz19.py` en selecteer "Uploaden naar /"
 
-  ![Bestand uploaden met Thonnie](images/thonny-bestand-uploaden.png)
+  ![Bestand uploaden met Thonny](images/thonny-bestand-uploaden.png)
 
 > [!Important]
 > Zorg dat je programma gestopt is door op de Stop knop te klikken voordat je een bestand probeert te uploaden.
 
-* Het bestand staat nu op de Raspberry Pi Pico W. Alle mhz19 functies zijn nu beschikbaar in je programma.
+5. Het bestand staat nu op de Raspberry Pi Pico W. Alle mhz19 functies zijn nu beschikbaar in je programma.
 
-  ![Bestand geupload in Thonnie](images/thonny-bestand-geupload.png)
+  ![Bestand geupload in Thonny](images/thonny-bestand-geupload.png)
 
 > [!NOTE]
 > Voor wie diep de materie in wil: de mhz19 functies regelen de communicatie via UART. Het protocol van de sensor wordt gespecificeerd in de handleiding van de [MH-Z19C sensor](datasheets/MH-Z19C.pdf). In [`mhz19.py`](code/mhz19.py) zie je bijvoorbeeld de beschreven CRC functie en het verzenden van de specifieke bytes om data te ontvangen.
