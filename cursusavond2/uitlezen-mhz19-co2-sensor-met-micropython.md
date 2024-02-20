@@ -62,30 +62,30 @@ In dit programma maken we gebruik van functies die niet standaard beschikbaar zi
 > Voor wie diep de materie in wil: de mhz19 functies regelen de communicatie via UART. Het protocol van de sensor wordt gespecificeerd in de handleiding van de [MH-Z19C sensor](datasheets/MH-Z19C.pdf). In [`mhz19.py`](code/mhz19.py) zie je bijvoorbeeld de beschreven CRC functie en het verzenden van de specifieke bytes om data te ontvangen.
 
 ## Programmeren
-* Maak een nieuw bestand aan en sla hem op als: `uitlezen-mhz19.py`
-* Bovenin moeten we weer de functies specificeren die we gaan gebruiken. Neem dit blok letterlijk over:
+1. Maak een nieuw bestand aan en sla hem op als: `uitlezen-mhz19.py`
+2. Bovenin moeten we weer de functies specificeren die we gaan gebruiken. Neem dit blok letterlijk over:
   ```python
   from mhz19 import mhz19
   from time import sleep
   ```
 
-* De rest van de code lijkt op de DHT22 code: we maken een variabele genaamd `sensor`. De sensor is een mhz19 sensor en om met de sensor te werken moeten we hem aanmaken met de `mhz19` functie. Deze functie moet weten op welke UART pinnen de sensor aangesloten zit. Die zit aangesloten op `UART0`, dus geven het getal `0` mee als argument aan de functie:
+3. De rest van de code lijkt op de DHT22 code: we maken een variabele genaamd `sensor`. De sensor is een mhz19 sensor en om met de sensor te werken moeten we hem aanmaken met de `mhz19` functie. Deze functie moet weten op welke UART pinnen de sensor aangesloten zit. Die zit aangesloten op `UART0`, dus geven het getal `0` mee als argument aan de functie:
   ```python
   sensor = mhz19(0)
   ```
 
-* Nu gaan we de sensor uitlezen. We roepen hiervoor de `get_data()` functie van de `sensor` aan. Die gaat een meting uitvoeren. Daarna kunnen we de temperatuur opvragen met de `temp` waarde van de `sensor` en direct gebruiken in een print statement.
+4. Nu gaan we de sensor uitlezen. We roepen hiervoor de `get_data()` functie van de `sensor` aan. Die gaat een meting uitvoeren. Daarna kunnen we de temperatuur opvragen met de `temp` waarde van de `sensor` en direct gebruiken in een print statement.
   ```python
   sensor.get_data()
   print(f"Temperatuur: {sensor.temp} graden Celsius")
   ```
 
-* Probeer dit programma uit door bovenin op de groene play knop te klikken. In de Shell onderin verschijnt de huidige temperatuur als je alles goed gedaan hebt.
+5. Probeer dit programma uit door bovenin op de groene play knop te klikken. In de Shell onderin verschijnt de huidige temperatuur als je alles goed gedaan hebt.
 
 > [!TIP]
 > De temperatuursensor niet zo nauwkeurig als de DHT22 sensor, dus de temperatuur is een grove benadering.
 
-* De `get_data()` functie geeft een waarde `1` terug als die succesvol data heeft kunnen lezen. Bij een waarde van `0` dan is er iets misgegaan. Als het mis is gegaan hoeven we niet de temperatuur te printen. Dus maken we ons programma robuuster:
+6. De `get_data()` functie geeft een waarde `1` terug als die succesvol data heeft kunnen lezen. Bij een waarde van `0` dan is er iets misgegaan. Als het mis is gegaan hoeven we niet de temperatuur te printen. Dus maken we ons programma robuuster:
   ```python
   if sensor.get_data():
       print(f"Temperatuur: {sensor.temp} graden Celsius")
@@ -93,13 +93,13 @@ In dit programma maken we gebruik van functies die niet standaard beschikbaar zi
       print("Geen data ontvangen")
   ```
 
-* De CO2 waarde kunnen we opvragen met de `ppm` waarde van de `sensor`. Voeg een extra print statement toe wat de CO2 waarde print.
+7. De CO2 waarde kunnen we opvragen met de `ppm` waarde van de `sensor`. Voeg een extra print statement toe wat de CO2 waarde print.
 
 > [!TIP]
 > De CO2 sensor heeft een opwarmtijd van enkele minuten. Tot die tijd laat die een sensor waarde van 500 of 515 zien. De maximum detectie waarde is 2000 ppm CO2. Hoger wordt ook gerapporteerd als 2000 ppm. Zie onderstaande tabel voor acceptabele CO2 waarden:
 >
 > ![CO2-meterkaart](images/co2-meterkaart.jpg)
 
-* Zet de metingen in een `while True:` loop om de opwarmtijd te overbruggen.
+8. Zet de metingen in een `while True:` loop om de opwarmtijd te overbruggen.
 
 De gehele voorbeeld code is te vinden in [code/uitlezen-mhz19.py](code/uitlezen-mhz19.py).
