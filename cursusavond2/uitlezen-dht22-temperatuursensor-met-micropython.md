@@ -68,7 +68,7 @@ De gehele voorbeeld code is te vinden in [code/dht22.py](code/dht22.py).
   data_pin = Pin(28)
   ```
 > [!TIP]
-> Een variabele is een soort van doos in het geheugen van een computer waar je een waarde in kan opslaan. Verderop in je programma kun je refereren aan deze variabele. Je kan ook een nieuwe waarde toewijzen aan een variabele. Voor meer uitleg zie [hoofdstuk 1 van Automnate the boring stuff](https://automatetheboringstuff.com/2e/chapter1/).
+> Een variabele is een soort van doos in het geheugen van een computer waar je een waarde in kan opslaan. Verderop in je programma kun je refereren aan deze variabele. Je kan ook een nieuwe waarde toewijzen aan een variabele. Voor meer uitleg zie [hoofdstuk 1 van Automate the boring stuff](https://automatetheboringstuff.com/2e/chapter1/).
 
 * Vervolgens maken we een variabele genaamd `sensor`. De sensor is een DHT22 sensor en om met de sensor te werken moeten we hem aanmaken met de `DHT22` functie. Deze functie moet weten op welke GPIO pin de sensor aangesloten zit. Dat doen we door de `data_pin` mee te geven als argument aan de functie:
   ```python
@@ -85,7 +85,7 @@ De gehele voorbeeld code is te vinden in [code/dht22.py](code/dht22.py).
 * Probeer dit programma uit door bovenin op de groene play knop te klikken. In de Shell onderin verschijnt de huidige temperatuur als je alles goed gedaan hebt. Gaat er iets fout, lees dan aandachtig de foutmelding door. Mogelijk heb je een type fout gemaakt, waardoor de syntax niet klopt.
 
 > [!TIP]
-> Een AI assistent als Microsoft CoPilot of ChatGPT kunnen je op verschillende manieren helpen. Je kan vragen om code of concepten uit te leggen. Je kan vragen waar een syntax fout zit. Of je kan hele stukken code laten genereren. Vermeld bij je vragen dat je MicroPython gebruikt op de Raspberry Pi Pico W. Een punt van aandacht: deze assistenten geven een antwoord zoals ze verwachten dat een antwoord eruit ziet. Dat antwoord hoeft niet feitelijk correct te zijn, maar kan er toch uit zien als een goed antwoord. Dus bij twijfel: vraag het een expert!
+> Een AI assistent als [Microsoft CoPilot](https://copilot.microsoft.com) of [ChatGPT](https://chat.openai.com/) kunnen je op verschillende manieren helpen. Je kan vragen om code of concepten uit te leggen. Je kan vragen waar een syntax fout zit. Of je kan hele stukken code laten genereren. Vermeld bij je vragen dat je MicroPython gebruikt op de Raspberry Pi Pico W. Een punt van aandacht: deze assistenten geven een antwoord zoals ze verwachten dat een antwoord eruit ziet. Dat antwoord hoeft niet feitelijk correct te zijn, maar kan er toch uit zien als een goed antwoord. Dus bij twijfel: vraag het een expert!
 
 * De output van het programma is de temperatuur in graden celsius. Maar je ziet alleen een nummertje. Dit kunnen we verbeteren door een iets duidelijkere output te genereren. Vervang de regel met `print(temperatuur)` door een geformateerde tekst. In een zogenaamde f-string kun je tussen accolades refereren aan variabelen, wiens waarden dan uitgeprint worden:
   ```python
