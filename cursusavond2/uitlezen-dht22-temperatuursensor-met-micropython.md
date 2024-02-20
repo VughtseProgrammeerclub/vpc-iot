@@ -50,13 +50,13 @@ Dat ziet er dan als volgt uit:
 ![DHT22 aangesloten op een Raspberry Pi Pico W](images/dht22-aangesloten.jpg)
 
 ## Programmeren
-De gehele voorbeeld code is te vinden in [code/dht22.py](code/dht22.py).
+De gehele voorbeeld code is te vinden in [code/uitlezen-dht22.py](code/uitlezen-dht22.py).
 
 > [!TIP]
 > MicroPython heeft allerlei ingebouwde functies (bouwblokken). Een paar functies zijn direct beschikbaar, maar de meeste functies moeten eerst geïmporteerd worden voor je ze kan gebruiken. In deze opdracht gebruiken we [standaard Python functies](https://docs.micropython.org/en/latest/library/index.html#python-standard-libraries-and-micro-libraries) zoals `time.sleep()`, maar ook [MicroPython specifieke](https://docs.micropython.org/en/latest/library/index.html#micropython-specific-libraries) zoals `machine.Pin()`. Hierdoor moet de code die we voor de Raspberry Pi Pico W schrijven ook daadwerkelijk op een Raspberry Pi Pico W uitgevoerd worden. Ondanks dat je op je computer ook Python kan draaien, zal die code niet werken op je computer. In Thonny moet je daarom de juiste interpreter ingesteld hebben, zoals beschreven in de [Introductie Raspberry Pi Pico met Thonny](introductie-raspberry-pi-pico-met-thonny.md). 
 
 * Open Thonny
-* Maak een nieuw bestand aan en sla hem op als: `dht22.py`
+* Maak een nieuw bestand aan en sla hem op als: `uitlezen-dht22.py`
 * Bovenin moeten we de functies specificeren die we gaan gebruiken. Neem dit blok letterlijk over:
   ```python
   from dht import DHT22
