@@ -11,13 +11,13 @@ Voor dit project heb je nodig:
 Een **breadboard**, ook wel bekend als **steekbord**, is een handig hulpmiddel voor elektronica hobbyisten om schakelingen te bouwen zonder te solderen. Laten we eens kijken hoe het werkt:
 
 ### Wat is een Breadboard?
-   - Een breadboard is een rechthoekig plastic bord met kleine gaatjes erin. Deze gaatjes stellen je in staat om elektronische componenten zoals weerstanden, LED's en schakelaars te plaatsen en met elkaar te verbinden zonder dat je hoeft te solderen.
-   - Het is een geweldige manier om snel en gemakkelijk te experimenteren met elektronische schakelingen.
+- Een breadboard is een rechthoekig plastic bord met kleine gaatjes erin. Deze gaatjes stellen je in staat om elektronische componenten zoals weerstanden, LED's en schakelaars te plaatsen en met elkaar te verbinden zonder dat je hoeft te solderen.
+ - Het is een geweldige manier om snel en gemakkelijk te experimenteren met elektronische schakelingen.
 
 ### Hoe werkt een Breadboard?
-   - Aan de buitenkant van een breadboard kun je niet zien hoe de contacten lopen. De contacten worden gevormd door metalen strips die de gaatjes onderling verbinden per rij.
-   - In het midden van het breadboard zie je rijen met twee kolommen van vijf contacten, gelabeld a-e en f-j. Deze vijf contacten zijn met elkaar verbonden. Hierin kun je onderdelen steken die dan vervolgens met elkaar worden verbonden door de contactstrip en met behulp van breadboard steekdraden.
-   - De buitenste strips worden normaal gesproken gebruikt voor de energievoorziening. Hier verbind je de min (-) en de plus (+) van de batterij of voeding aan. Vanaf deze strips kun je vervolgens de onderdelen in het midden van het breadboard, waar gewenst, met steekdraden van spanning voorzien.
+- Aan de buitenkant van een breadboard kun je niet zien hoe de contacten lopen. De contacten worden gevormd door metalen strips die de gaatjes onderling verbinden per rij.
+- In het midden van het breadboard zie je rijen met twee kolommen van vijf contacten, gelabeld a-e en f-j. Deze vijf contacten zijn met elkaar verbonden. Hierin kun je onderdelen steken die dan vervolgens met elkaar worden verbonden door de contactstrip en met behulp van breadboard steekdraden.
+- De buitenste strips worden normaal gesproken gebruikt voor de energievoorziening. Hier verbind je de min (-) en de plus (+) van de batterij of voeding aan. Vanaf deze strips kun je vervolgens de onderdelen in het midden van het breadboard, waar gewenst, met steekdraden van spanning voorzien.
 
 ## Aansluiten
 Plaats de Raspberry Pi Pico W op het breadboard:
@@ -58,59 +58,59 @@ De gehele voorbeeld code is te vinden in [code/uitlezen-dht22.py](code/uitlezen-
 1. Open Thonny
 2. Maak een nieuw bestand aan en sla hem op als: `uitlezen-dht22.py`
 3. Bovenin moeten we de functies specificeren die we gaan gebruiken. Neem dit blok letterlijk over:
-  ```python
-  from dht import DHT22
-  from machine import Pin
-  from time import sleep
-  ```
+    ```python
+    from dht import DHT22
+    from machine import Pin
+    from time import sleep
+    ```
 4. De sensor zit aangesloten op GPIO pin 28. Maak een variabele genaamd `data_pin` aan te maken en daar pin 28 aan toe te wijzen. De waarde van de variabele `data_pin` is het resultaat van de aanroep naar functie `Pin` met als argument het getal `28`:
-  ```python
-  data_pin = Pin(28)
-  ```
-> [!TIP]
-> Een variabele is een soort van doos in het geheugen van een computer waar je een waarde in kan opslaan. Verderop in je programma kun je refereren aan deze variabele. Je kan ook een nieuwe waarde toewijzen aan een variabele. Voor meer uitleg zie [hoofdstuk 1 van Automate the boring stuff](https://automatetheboringstuff.com/2e/chapter1/).
+    ```python
+    data_pin = Pin(28)
+    ```
+    > [!TIP]
+    > Een variabele is een soort van doos in het geheugen van een computer waar je een waarde in kan opslaan. Verderop in je programma kun je refereren aan deze variabele. Je kan ook een nieuwe waarde toewijzen aan een variabele. Voor meer uitleg zie [hoofdstuk 1 van Automate the boring stuff](https://automatetheboringstuff.com/2e/chapter1/).
 
 5. Vervolgens maken we een variabele genaamd `sensor`. De sensor is een DHT22 sensor en om met de sensor te werken moeten we hem aanmaken met de `DHT22` functie. Deze functie moet weten op welke GPIO pin de sensor aangesloten zit. Dat doen we door de `data_pin` mee te geven als argument aan de functie:
-  ```python
-  sensor = DHT22(data_pin)
-  ```
+    ```python
+    sensor = DHT22(data_pin)
+    ```
 
 6. Nu gaan we de sensor uitlezen. We roepen hiervoor de `measure()` functie van de `sensor` aan. Die gaat een meting uitvoeren. Daarna kunnen we de temperatuur opvragen met de `temperature()` van de `sensor` en opslaan in een variabele `temperatuur`. Als laatste printen we de temperatuur. Dit gaat niet naar en echte printer, maar print de output op het scherm.
-  ```python
-  sensor.measure()
-  temperatuur = sensor.temperature()
-  print(temperatuur)
-  ```
+    ```python
+    sensor.measure()
+    temperatuur = sensor.temperature()
+    print(temperatuur)
+    ```
 
 7. Probeer dit programma uit door bovenin op de groene play knop te klikken. In de Shell onderin verschijnt de huidige temperatuur als je alles goed gedaan hebt. Gaat er iets fout, lees dan aandachtig de foutmelding door. Mogelijk heb je een type fout gemaakt, waardoor de syntax niet klopt.
 
-> [!TIP]
-> Een AI assistent als [Microsoft CoPilot](https://copilot.microsoft.com) of [ChatGPT](https://chat.openai.com/) kunnen je op verschillende manieren helpen. Je kan vragen om code of concepten uit te leggen. Je kan vragen waar een syntax fout zit. Of je kan hele stukken code laten genereren. Vermeld bij je vragen dat je MicroPython gebruikt op de Raspberry Pi Pico W. Een punt van aandacht: deze assistenten geven een antwoord zoals ze verwachten dat een antwoord eruit ziet. Dat antwoord hoeft niet feitelijk correct te zijn, maar kan er toch uit zien als een goed antwoord. Dus bij twijfel: vraag het een expert!
+    > [!TIP]
+    > Een AI assistent als [Microsoft CoPilot](https://copilot.microsoft.com) of [ChatGPT](https://chat.openai.com/) kunnen je op verschillende manieren helpen. Je kan vragen om code of concepten uit te leggen. Je kan vragen waar een syntax fout zit. Of je kan hele stukken code laten genereren. Vermeld bij je vragen dat je MicroPython gebruikt op de Raspberry Pi Pico W. Een punt van aandacht: deze assistenten geven een antwoord zoals ze verwachten dat een antwoord eruit ziet. Dat antwoord hoeft niet feitelijk correct te zijn, maar kan er toch uit zien als een goed antwoord. Dus bij twijfel: vraag het een expert!
 
 8. De output van het programma is de temperatuur in graden celsius. Maar je ziet alleen een nummertje. Dit kunnen we verbeteren door een iets duidelijkere output te genereren. Vervang de regel met `print(temperatuur)` door een geformateerde tekst. In een zogenaamde f-string kun je tussen accolades refereren aan variabelen, wiens waarden dan uitgeprint worden:
-  ```python
-  print(f"Temperatuur: {temperatuur} graden")
-  ```
+    ```python
+    print(f"Temperatuur: {temperatuur} graden")
+    ```
 
 9. Voer het programma opnieuw uit door op de groene play knop te klikken. Zie je in de Shell onderin je geformateerde tekst?
 
 10. Dit programma print nu eenmalig de temperatuur en is daarna klaar met het uitvoeren van alle instructies. Als we meerdere metingen uit willen voeren dan kunnen we het meten en printen van de temperatuur in een *zolang als* lus zetten. Zolang als de conditie *waar* is, blijft de lus gaan. Als we zeggen `while True:` dan blijft de lus oneindig doorgaan, totdat het programma gestopt wordt met de Stop knop of er een fout optreedt. Voeg deze lus toe zodat de code er zo uit ziet:
 
-  ```python
-  while True:
-      sensor.measure()
-      temperatuur = sensor.temperature()
-      print(f"Temperatuur: {temperatuur} graden")
-  ```
-> [!TIP]
-> De inspringing (indentation) in Python moet secuur toegepast worden. Bij een `if`, `else`, `for` of `while` geeft het ingesprongen blok aan op welk code block het betrekking heeft. Bijvoorbeeld:
-> ```
-> print("Het basis niveau")
-> if True:
->     print("Dit valt onder de if")
->     print("Dit ook")
-> print("Dit niet meer, want het is niet meer ingesprongen")
-> ```
+    ```python
+    while True:
+        sensor.measure()
+        temperatuur = sensor.temperature()
+        print(f"Temperatuur: {temperatuur} graden")
+    ```
+    > [!TIP]
+    > De inspringing (indentation) in Python moet secuur toegepast worden. Bij een `if`, `else`, `for` of `while` geeft het ingesprongen blok aan op welk code block het betrekking heeft. Bijvoorbeeld:
+    > ```
+    > print("Het basis niveau")
+    > if True:
+    >     print("Dit valt onder de if")
+    >     print("Dit ook")
+    > print("Dit niet meer, want het is niet meer ingesprongen")
+    > ```
 
 11. Voer het programma opnieuw uit door op de groene play knop te klikken. In de Shell zouden nu je temperatuurmetingen elkaar op moeten volgen.
 

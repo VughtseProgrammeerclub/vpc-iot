@@ -42,63 +42,63 @@ In dit programma maken we gebruik van functies die niet standaard beschikbaar zi
 
 2. In Thonny, klik bovenin op "Weergave" en vink "Bestanden" aan. Je ziet nu zowel de bestanden op je eigen computer als op de Raspberry Pi Pico W.
 
-  ![Openen van het Bestandenpaneel in Thonny](images/thonny-weergave-bestanden.png)
+    ![Openen van het Bestandenpaneel in Thonny](images/thonny-weergave-bestanden.png)
 3. Open de map waar `mhz19.py` staat.
 
-  ![Bestandenpaneel van Thonny](images/thonny-bestandenpaneel.png)
+    ![Bestandenpaneel van Thonny](images/thonny-bestandenpaneel.png)
 
 4. Klik met de rechter muisknop op het bestand `mhz19.py` en selecteer "Uploaden naar /"
 
-  ![Bestand uploaden met Thonny](images/thonny-bestand-uploaden.png)
+    ![Bestand uploaden met Thonny](images/thonny-bestand-uploaden.png)
 
-> [!Important]
-> Zorg dat je programma gestopt is door op de Stop knop te klikken voordat je een bestand probeert te uploaden.
+    > [!Important]
+    > Zorg dat je programma gestopt is door op de Stop knop te klikken voordat je een bestand probeert te uploaden.
 
 5. Het bestand staat nu op de Raspberry Pi Pico W. Alle mhz19 functies zijn nu beschikbaar in je programma.
 
-  ![Bestand geupload in Thonny](images/thonny-bestand-geupload.png)
+    ![Bestand geupload in Thonny](images/thonny-bestand-geupload.png)
 
-> [!NOTE]
-> Voor wie diep de materie in wil: de mhz19 functies regelen de communicatie via UART. Het protocol van de sensor wordt gespecificeerd in de handleiding van de [MH-Z19C sensor](datasheets/MH-Z19C.pdf). In [`mhz19.py`](code/mhz19.py) zie je bijvoorbeeld de beschreven CRC functie en het verzenden van de specifieke bytes om data te ontvangen.
+    > [!NOTE]
+    > Voor wie diep de materie in wil: de mhz19 functies regelen de communicatie via UART. Het protocol van de sensor wordt gespecificeerd in de handleiding van de [MH-Z19C sensor](datasheets/MH-Z19C.pdf). In [`mhz19.py`](code/mhz19.py) zie je bijvoorbeeld de beschreven CRC functie en het verzenden van de specifieke bytes om data te ontvangen.
 
 ## Programmeren
 1. Maak een nieuw bestand aan en sla hem op als: `uitlezen-mhz19.py`
 2. Bovenin moeten we weer de functies specificeren die we gaan gebruiken. Neem dit blok letterlijk over:
-  ```python
-  from mhz19 import mhz19
-  from time import sleep
-  ```
+    ```python
+    from mhz19 import mhz19
+    from time import sleep
+    ```
 
 3. De rest van de code lijkt op de DHT22 code: we maken een variabele genaamd `sensor`. De sensor is een mhz19 sensor en om met de sensor te werken moeten we hem aanmaken met de `mhz19` functie. Deze functie moet weten op welke UART pinnen de sensor aangesloten zit. Die zit aangesloten op `UART0`, dus geven het getal `0` mee als argument aan de functie:
-  ```python
-  sensor = mhz19(0)
-  ```
+    ```python
+    sensor = mhz19(0)
+    ```
 
 4. Nu gaan we de sensor uitlezen. We roepen hiervoor de `get_data()` functie van de `sensor` aan. Die gaat een meting uitvoeren. Daarna kunnen we de temperatuur opvragen met de `temp` waarde van de `sensor` en direct gebruiken in een print statement.
-  ```python
-  sensor.get_data()
-  print(f"Temperatuur: {sensor.temp} graden Celsius")
-  ```
+    ```python
+    sensor.get_data()
+    print(f"Temperatuur: {sensor.temp} graden Celsius")
+    ```
 
 5. Probeer dit programma uit door bovenin op de groene play knop te klikken. In de Shell onderin verschijnt de huidige temperatuur als je alles goed gedaan hebt.
 
-> [!TIP]
-> De temperatuursensor niet zo nauwkeurig als de DHT22 sensor, dus de temperatuur is een grove benadering.
+    > [!TIP]
+    > De temperatuursensor niet zo nauwkeurig als de DHT22 sensor, dus de temperatuur is een grove benadering.
 
 6. De `get_data()` functie geeft een waarde `1` terug als die succesvol data heeft kunnen lezen. Bij een waarde van `0` dan is er iets misgegaan. Als het mis is gegaan hoeven we niet de temperatuur te printen. Dus maken we ons programma robuuster:
-  ```python
-  if sensor.get_data():
-      print(f"Temperatuur: {sensor.temp} graden Celsius")
-  else:
-      print("Geen data ontvangen")
-  ```
+    ```python
+    if sensor.get_data():
+        print(f"Temperatuur: {sensor.temp} graden Celsius")
+    else:
+        print("Geen data ontvangen")
+    ```
 
 7. De CO2 waarde kunnen we opvragen met de `ppm` waarde van de `sensor`. Voeg een extra print statement toe wat de CO2 waarde print.
 
-> [!TIP]
-> De CO2 sensor heeft een opwarmtijd van enkele minuten. Tot die tijd laat die een sensor waarde van 500 of 515 zien. De maximum detectie waarde is 2000 ppm CO2. Hoger wordt ook gerapporteerd als 2000 ppm. Zie onderstaande tabel voor acceptabele CO2 waarden:
->
-> ![CO2-meterkaart](images/co2-meterkaart.jpg)
+    > [!TIP]
+    > De CO2 sensor heeft een opwarmtijd van enkele minuten. Tot die tijd laat die een sensor waarde van 500 of 515 zien. De maximum detectie waarde is 2000 ppm CO2. Hoger wordt ook gerapporteerd als 2000 ppm. Zie onderstaande tabel voor acceptabele CO2 waarden:
+    >
+    > ![CO2-meterkaart](images/co2-meterkaart.jpg)
 
 8. Zet de metingen in een `while True:` loop om de opwarmtijd te overbruggen.
 
