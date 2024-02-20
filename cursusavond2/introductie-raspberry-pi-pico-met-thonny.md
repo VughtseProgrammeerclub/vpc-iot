@@ -8,7 +8,7 @@ Als je een breadboard hebt, plaats dan je Raspberry Pi Pico erop.
 
 Zorg ervoor dat de twee headers gescheiden zijn door de scheiding in het midden.
 
-![Pico op een breadboard](images/Pico-Top-Breadboard.png)
+![Raspberry Pi Pico op een breadboard](images/Pico-Top-Breadboard.png)
  
 Steek je micro-USB-kabel in de poort aan de linkerkant van het bord.
 
@@ -16,7 +16,7 @@ Steek je micro-USB-kabel in de poort aan de linkerkant van het bord.
 
 Gedurende de opdrachten zul je de pinnummers van een Raspberry Pi Pico moeten weten. Deze kun je opzoeken in het volgende diagram.
 
-![Pinnummers van een Raspberry Pi Pico](images/Pico-R3-Pinout.png)
+![Pinnummers van een Raspberry Pi Pico W](images/Pico-W-Pinout.png)
 
 ## Installeer Thonny
 
