@@ -13,3 +13,4 @@ while True:
     print(f"Temperatuur: {temperatuur} graden")
     print(f"Luchtvochtigheid: {luchtvochtigheid}%")
 
+    sleep(5)
