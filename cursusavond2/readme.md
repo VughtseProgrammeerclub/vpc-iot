@@ -4,4 +4,5 @@
 * [Introductie microPython + Thonny](introductie-raspberry-pi-pico-met-thonny.md): Raspberry Pi Pico aansluiten op de PC en de LED laten knipperen
 * [De temperatuur en luchtvochtigheid uitlezen met de DHT22 sensor](uitlezen-dht22-temperatuursensor-met-micropython.md)
 * [Verbinden met het Wifi](raspberry-pi-pico-w-verbinden-met-wifi.md)
+* [Meetwaarden beschikbaar maken over Wifi door het opzetten van een webserver](opzetten-van-een-webserver-op-de-raspberry-pi-pico.md)
 * [De CO2 sensor uitlezen](uitlezen-mhz19-co2-sensor-met-micropython.md)
