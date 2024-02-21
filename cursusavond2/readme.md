@@ -1,8 +1,8 @@
 # Programma cursusavond 2
 
 * [Korte samenvatting avond 1](../cursusavond1/readme.md)
-* [Introductie microPython + Thonny](introductie-raspberry-pi-pico-met-thonny.md): Raspberry Pi Pico aansluiten op de PC en de LED laten knipperen
-* [De temperatuur en luchtvochtigheid uitlezen met de DHT22 sensor](uitlezen-dht22-temperatuursensor-met-micropython.md)
-* [Verbinden met het Wifi](raspberry-pi-pico-w-verbinden-met-wifi.md)
-* [Meetwaarden beschikbaar maken over Wifi door het opzetten van een webserver](opzetten-van-een-webserver-op-de-raspberry-pi-pico.md)
-* [De CO2 sensor uitlezen](uitlezen-mhz19-co2-sensor-met-micropython.md)
+* [Introductie microPython + Thonny](1-introductie-raspberry-pi-pico-met-thonny.md): Raspberry Pi Pico aansluiten op de PC en de LED laten knipperen
+* [De temperatuur en luchtvochtigheid uitlezen met de DHT22 sensor](2-uitlezen-dht22-temperatuursensor-met-micropython.md)
+* [Verbinden met het Wifi](3-raspberry-pi-pico-w-verbinden-met-wifi.md)
+* [Meetwaarden beschikbaar maken over Wifi door het opzetten van een webserver](4-opzetten-van-een-webserver-op-de-raspberry-pi-pico.md)
+* [De CO2 sensor uitlezen](5-uitlezen-mhz19-co2-sensor-met-micropython.md)
