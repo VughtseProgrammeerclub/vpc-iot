@@ -51,15 +51,15 @@ In dit programma maken we gebruik van functies die niet standaard beschikbaar zi
 
     ![Bestand uploaden met Thonny](images/thonny-bestand-uploaden.png)
 
-    > [!Important]
-    > Zorg dat je programma gestopt is door op de Stop knop te klikken voordat je een bestand probeert te uploaden.
+> [!Important]
+> Zorg dat je programma gestopt is door op de Stop knop te klikken voordat je een bestand probeert te uploaden.
 
 5. Het bestand staat nu op de Raspberry Pi Pico W. Alle mhz19 functies zijn nu beschikbaar in je programma.
 
     ![Bestand geupload in Thonny](images/thonny-bestand-geupload.png)
 
-    > [!NOTE]
-    > Voor wie diep de materie in wil: de mhz19 functies regelen de communicatie via UART. Het protocol van de sensor wordt gespecificeerd in de handleiding van de [MH-Z19C sensor](datasheets/MH-Z19C.pdf). In [`mhz19.py`](code/mhz19.py) zie je bijvoorbeeld de beschreven CRC functie en het verzenden van de specifieke bytes om data te ontvangen.
+> [!NOTE]
+> Voor wie diep de materie in wil: de mhz19 functies regelen de communicatie via UART. Het protocol van de sensor wordt gespecificeerd in de handleiding van de [MH-Z19C sensor](datasheets/MH-Z19C.pdf). In [`mhz19.py`](code/mhz19.py) zie je bijvoorbeeld de beschreven CRC functie en het verzenden van de specifieke bytes om data te ontvangen.
 
 ## Programmeren
 1. Maak een nieuw bestand aan en sla hem op als: `uitlezen-mhz19.py`
@@ -82,8 +82,8 @@ In dit programma maken we gebruik van functies die niet standaard beschikbaar zi
 
 5. Probeer dit programma uit door bovenin op de groene play knop te klikken. In de Shell onderin verschijnt de huidige temperatuur als je alles goed gedaan hebt.
 
-    > [!TIP]
-    > De temperatuursensor niet zo nauwkeurig als de DHT22 sensor, dus de temperatuur is een grove benadering.
+> [!TIP]
+> De temperatuursensor niet zo nauwkeurig als de DHT22 sensor, dus de temperatuur is een grove benadering.
 
 6. De `get_data()` functie geeft een waarde `1` terug als die succesvol data heeft kunnen lezen. Bij een waarde van `0` dan is er iets misgegaan. Als het mis is gegaan hoeven we niet de temperatuur te printen. Dus maken we ons programma robuuster:
     ```python
@@ -95,10 +95,10 @@ In dit programma maken we gebruik van functies die niet standaard beschikbaar zi
 
 7. De CO2 waarde kunnen we opvragen met de `ppm` waarde van de `sensor`. Voeg een extra print statement toe wat de CO2 waarde print.
 
-    > [!TIP]
-    > De CO2 sensor heeft een opwarmtijd van enkele minuten. Tot die tijd laat die een sensor waarde van 500 of 515 zien. De maximum detectie waarde is 2000 ppm CO2. Hoger wordt ook gerapporteerd als 2000 ppm. Zie onderstaande tabel voor acceptabele CO2 waarden:
-    >
-    > ![CO2-meterkaart](images/co2-meterkaart.jpg)
+> [!TIP]
+> De CO2 sensor heeft een opwarmtijd van enkele minuten. Tot die tijd laat die een sensor waarde van 500 of 515 zien. De maximum detectie waarde is 2000 ppm CO2. Hoger wordt ook gerapporteerd als 2000 ppm. Zie onderstaande tabel voor acceptabele CO2 waarden:
+>
+> ![CO2-meterkaart](images/co2-meterkaart.jpg)
 
 8. Zet de metingen in een `while True:` loop om de opwarmtijd te overbruggen.
 

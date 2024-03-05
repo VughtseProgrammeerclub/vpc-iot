@@ -102,15 +102,15 @@ De gehele voorbeeld code is te vinden in [code/uitlezen-dht22.py](code/uitlezen-
         temperatuur = sensor.temperature()
         print(f"Temperatuur: {temperatuur} graden")
     ```
-    > [!TIP]
-    > De inspringing (indentation) in Python moet secuur toegepast worden. Bij een `if`, `else`, `for` of `while` geeft het ingesprongen blok aan op welk code block het betrekking heeft. Bijvoorbeeld:
-    > ```
-    > print("Het basis niveau")
-    > if True:
-    >     print("Dit valt onder de if")
-    >     print("Dit ook")
-    > print("Dit niet meer, want het is niet meer ingesprongen")
-    > ```
+> [!TIP]
+> De inspringing (indentation) in Python moet secuur toegepast worden. Bij een `if`, `else`, `for` of `while` geeft het ingesprongen blok aan op welk code block het betrekking heeft. Bijvoorbeeld:
+> ```
+> print("Het basis niveau")
+> if True:
+>     print("Dit valt onder de if")
+>     print("Dit ook")
+> print("Dit niet meer, want het is niet meer ingesprongen")
+> ```
 
 11. Voer het programma opnieuw uit door op de groene play knop te klikken. In de Shell zouden nu je temperatuurmetingen elkaar op moeten volgen.
 

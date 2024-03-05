@@ -10,8 +10,8 @@ Voor deze instructie gaan we ervan uit dat je de [Raspberry Pi Pico W verbonden 
     import socket
     ```
 
-    > [!TIP]
-    > Een socket is de manier waarop een server kan luisteren naar een client die ermee wil verbinden. De webpagina die je momenteel bekijkt, wordt gehost op servers van de Raspberry Pi Foundation. Deze servers hebben een open socket die wacht op een verbinding van je webbrowser. Op dat moment worden de inhoud van de webpagina naar je computer verzonden. In dit geval fungeert je server als je Raspberry Pi Pico W en de client is een webbrowser op een andere computer.
+> [!TIP]
+> Een socket is de manier waarop een server kan luisteren naar een client die ermee wil verbinden. De webpagina die je momenteel bekijkt, wordt gehost op servers van de Raspberry Pi Foundation. Deze servers hebben een open socket die wacht op een verbinding van je webbrowser. Op dat moment worden de inhoud van de webpagina naar je computer verzonden. In dit geval fungeert je server als je Raspberry Pi Pico W en de client is een webbrowser op een andere computer.
 
 2. Om een socket te openen, moet je het IP-adres en een poortnummer opgeven. Poortnummers worden door computers gebruikt om te bepalen waar verzoeken naartoe moeten worden gestuurd. Bijvoorbeeld, poort 80 wordt normaal gesproken gebruikt voor webverkeer; Stardew Valley gebruikt poort 24642 wanneer je een multiplayer spel speelt. Omdat je een webserver aan het opzetten bent, ga je poort 80 gebruiken. Maak een nieuwe functie die kan worden aangeroepen om een socket te openen. Plaats deze boven je try/except-blok. Begin door de socket een IP-adres en een poortnummer te geven.
     ```python
@@ -24,11 +24,11 @@ Voor deze instructie gaan we ervan uit dat je de [Raspberry Pi Pico W verbonden 
     ```
 
 3. Je Raspberry Pi Pico W luistert nu naar verbindingen op zijn IP-adres op poort 80. Dit betekent dat het klaar is om data te serveren. In dit geval gaan we HTML sturen, zodat een verbonden webbrowser een webpagina kan bekijken. Een webpagina kan zo eenvoudig zijn als wat tekst, opgemaakt op een manier die een webbrowser kan weergeven en enige interactiviteit biedt. Hoewel Thonny niet specifiek is ontworpen om HTML te schrijven, kun je het wel voor dit doel gebruiken.
-    
-    > [!TIP]
-    > **HTML (Hyper Text Markup Language)** is een opmaaktaal die wordt gebruikt om de structuur en opmaak van webpagina’s te beschrijven. Het is geen programmeertaal, maar eerder een manier om tekst en andere elementen op een webpagina te structureren en te markeren.
-    >
-    > Met HTML kun je de inhoud van een webpagina definiëren, zoals koppen, paragrafen, lijsten, afbeeldingen, links en meer. HTML-documenten bestaan uit tags (ook wel elementen genoemd) die worden gebruikt om de structuur van de pagina aan te geven. Tags worden meestal in paren gebruikt, zoals `<h1>` (openingstag) en `</h1>` (sluitingstag).
+
+> [!TIP]
+> **HTML (Hyper Text Markup Language)** is een opmaaktaal die wordt gebruikt om de structuur en opmaak van webpagina’s te beschrijven. Het is geen programmeertaal, maar eerder een manier om tekst en andere elementen op een webpagina te structureren en te markeren.
+>
+> Met HTML kun je de inhoud van een webpagina definiëren, zoals koppen, paragrafen, lijsten, afbeeldingen, links en meer. HTML-documenten bestaan uit tags (ook wel elementen genoemd) die worden gebruikt om de structuur van de pagina aan te geven. Tags worden meestal in paren gebruikt, zoals `<h1>` (openingstag) en `</h1>` (sluitingstag).
     
 4. De webpagina gaat de buiten- en binnentemperatuur weergeven. Daarom krijgt de functie twee argumenten: `buiten_temperatuur` en `binnen_temperatuur`. We maken een multiline fstring aan en stoppen daar de HTML in die onze webpagina beschrijft:
     ```python

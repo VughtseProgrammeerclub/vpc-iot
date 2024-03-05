@@ -55,14 +55,14 @@ Om verbinding te maken met een WiFi-netwerk, moet je de service set identifier (
         return ip
     ```
 
-    > [!TIP]
-    > Een **IP-adres** (Internet Protocol-adres) is een unieke numerieke identificatie die wordt toegewezen aan elk apparaat dat is verbonden met een computernetwerk. Het fungeert als een adres waarmee apparaten met elkaar kunnen communiceren via het internet of een lokaal netwerk.
-    >
-    > Er zijn twee soorten IP-adressen:
-    >
-    > **IPv4 (Internet Protocol versie 4)**: Dit is de meest voorkomende vorm van IP-adressen. Het bestaat uit vier sets van getallen, gescheiden door punten (bijvoorbeeld 192.168.1.1). Elk getal kan variëren van 0 tot 255. IPv4-adressen zijn beperkt in aantal en raken langzaam op.
-    > 
-    > **IPv6 (Internet Protocol versie 6)**: Dit is een nieuwere standaard die is ontwikkeld om het tekort aan IPv4-adressen aan te pakken. IPv6-adressen zijn veel langer en bestaan uit acht sets van vier hexadecimale cijfers, gescheiden door dubbele punten (bijvoorbeeld 2001:0db8:85a3:0000:0000:8a2e:0370:7334). IPv6 biedt een veel groter aantal mogelijke adressen.
+> [!TIP]
+> Een **IP-adres** (Internet Protocol-adres) is een unieke numerieke identificatie die wordt toegewezen aan elk apparaat dat is verbonden met een computernetwerk. Het fungeert als een adres waarmee apparaten met elkaar kunnen communiceren via het internet of een lokaal netwerk.
+>
+> Er zijn twee soorten IP-adressen:
+>
+> **IPv4 (Internet Protocol versie 4)**: Dit is de meest voorkomende vorm van IP-adressen. Het bestaat uit vier sets van getallen, gescheiden door punten (bijvoorbeeld 192.168.1.1). Elk getal kan variëren van 0 tot 255. IPv4-adressen zijn beperkt in aantal en raken langzaam op.
+> 
+> **IPv6 (Internet Protocol versie 6)**: Dit is een nieuwere standaard die is ontwikkeld om het tekort aan IPv4-adressen aan te pakken. IPv6-adressen zijn veel langer en bestaan uit acht sets van vier hexadecimale cijfers, gescheiden door dubbele punten (bijvoorbeeld 2001:0db8:85a3:0000:0000:8a2e:0370:7334). IPv6 biedt een veel groter aantal mogelijke adressen.
 
 6. Nu gaan we de functie aanroepen. Plaats al je functieaanroepen onderaan je bestand, zodat ze de laatste regels code zijn die worden uitgevoerd. Omdat de WiFi-verbinding actief kan blijven, zelfs wanneer je de code stopt, kun je een try/except-blok toevoegen dat de Raspberry Pi Pico W opnieuw instelt wanneer het script wordt gestopt.
     ```python
