@@ -16,15 +16,14 @@ Dit is het programma van de cursus Smart Home van de Vughtse Programmeerclub.
 * Introductie microPython + Thonny
 
 ## 2+3. Zelf IoT programmeren (2 sessies: 20 februari en 5 maart)
+**[Verslag cursus avond 2](cursusavond2/readme.md)**
+**[Verslag cursus avond 3](cursusavond3/readme.md)**
 * Introductie microPython + Thonny
 * Uitlezen temperatuursensor
 * Verbinden met het Wifi
 * Opzetten van een webserver
 * I2C CO2 sensor
 * Relais schakelen
-* Webserver antwoord in JSON
-* Metrieken naar een metriekenserver sturen (kan vanaf een Pico maar ook je laptop)
-* Dashboard maken voor de metrieken
 
 ## 4. Home assistant (2 april)
 * Introductie Home Assistant
@@ -32,13 +31,13 @@ Dit is het programma van de cursus Smart Home van de Vughtse Programmeerclub.
 * Triggers, conditions en actions
 * Scenes en Blueprints
 
-## 5. ESPs programmeren voor Home Assistant (16 april)
+## 5. ESPs programmeren voor Home Assistant (14 mei)
 * Temperatuur sensor
 * Relais schakelen
 * CO2 sensor
 * Bluetooth bridge
 
-## 6. P1 meter (14 mei)
+## 6. P1 meter (28 mei)
 * Introductie P1
 * Uitlezen (mock) P1 meter met de ESP32
 * Integratie met HomeAssistant
@@ -54,10 +53,9 @@ Dit is het programma van de cursus Smart Home van de Vughtse Programmeerclub.
 * 5V relais 1-channel hoog-actief
 * RJ12 naar 6 Pins Dupont-Jumper Adapter - P1 Kabel Compatible
 * Breadboard 400 points (in 2 delen)
-
+* Hi-Link PCB Voeding - 5VDC 0.6A - HLK-PM01
 * DuPont Jumper draad Male-Male 10cm 10 draden
 * DuPont Jumper draad Female-Male 10cm 10 draden
 * 1x Wago doorverbinder
 * 2x Wago 3 punts verdeelblok
-
-* Stekker blok met aansluitingen voor het relais verwachten we voor de 2e sessie binnen te hebben
+* Kabeldoos met wartels en stekkerdoos

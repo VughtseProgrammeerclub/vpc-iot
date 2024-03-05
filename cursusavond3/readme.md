@@ -24,4 +24,4 @@ Uiteindelijk heeft vrijwel iedereen het relais aan het schakelen gekregen. Dit k
 
 Het eigen netwerk wat we bij ons hadden om de netwerk beveiliging van het wifi die geen verbindingen tussen machines onderling toestaat te omzeilen, werkt niet vlekkeloos. Zodoende gingen de opdrachten over het wifi nog steeds niet goed. Sommigen gebruikten het hotspot van hun telefoon om zowel Raspberry Pi Pico W en laptop op aan te sluiten en hadden daar wel succes mee. Waarschijnlijk was 40 verbindingen tegelijk (laptops + Picos) te veel van het goede voor het access point. Volgende keer nemen we een beter access point mee. Wanneer je deze opdracht thuis doet zal dit geen probleem zijn.
 
-Volgende cursusavond gaan we aan de slag met Home Assistant.
+Volgende cursusavond (2 april) gaan we aan de slag met Home Assistant.
