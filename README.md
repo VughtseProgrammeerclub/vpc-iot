@@ -17,6 +17,7 @@ Dit is het programma van de cursus Smart Home van de Vughtse Programmeerclub.
 
 ## 2+3. Zelf IoT programmeren (2 sessies: 20 februari en 5 maart)
 **[Verslag cursus avond 2](cursusavond2/readme.md)**
+
 **[Verslag cursus avond 3](cursusavond3/readme.md)**
 * Introductie microPython + Thonny
 * Uitlezen temperatuursensor
