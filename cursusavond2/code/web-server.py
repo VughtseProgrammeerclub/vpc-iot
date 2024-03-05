@@ -33,6 +33,7 @@ def webpage(buiten_temperatuur, binnen_temperatuur):
     html = f"""
             <!DOCTYPE html>
             <html>
+            <body>
             <p>Buiten temperatuur is {buiten_temperatuur} graden Celsius</p>
             <p>Binnen temperatuur is {binnen_temperatuur} graden Celsius</p>
             </body>

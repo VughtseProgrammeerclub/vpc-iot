@@ -36,6 +36,7 @@ Voor deze instructie gaan we ervan uit dat je de [Raspberry Pi Pico W verbonden 
         html = f"""
                 <!DOCTYPE html>
                 <html>
+                <body>
                 <p>Buiten temperatuur is {buiten_temperatuur} graden Celsius</p>
                 <p>Binnen temperatuur is {binnen_temperatuur} graden Celsius</p>
                 </body>
