@@ -20,8 +20,8 @@ Dit is het programma van de cursus Smart Home van de Vughtse Programmeerclub.
 * Uitlezen temperatuursensor
 * Verbinden met het Wifi
 * Opzetten van een webserver
-* Relais schakelen
 * I2C CO2 sensor
+* Relais schakelen
 * Webserver antwoord in JSON
 * Metrieken naar een metriekenserver sturen (kan vanaf een Pico maar ook je laptop)
 * Dashboard maken voor de metrieken
