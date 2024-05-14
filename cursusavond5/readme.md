@@ -138,6 +138,11 @@ In deze stappen gaan we een nieuw ESP apparaat aan Home Assistant toevoegen, zod
 * Klik op je Sensor om gedetailleerde informatie te zien.
     ![settings esphome device mijn sensor](images/settings-esphome-devices-mijn-sensor.png)
 
+
+# ESPHome en de Raspberry Pi Pico W
+
+ESPHome is ook bezig met support voor de Raspberry Pi Pico W. Helaas is ten tijde van de cursus de support nog niet goed genoeg om de Raspberry Pi Pico W te koppelen aan Home Assistant. In les 6 bekijken we een techniek waarmee het wel kan, maar dan moet er zelf geprogrammeerd worden.
+
 # Links
 * Mocht het installeren van de ESP32 via USB niet werken staan hier wat tips: https://esphome.io/guides/faq.html#i-can-t-get-flashing-over-usb-to-work
 * [Datasheet van de MakePico](datasheets/esp32-D0WDQ6_datasheet_en.pdf)
