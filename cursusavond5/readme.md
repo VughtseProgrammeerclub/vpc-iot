@@ -131,8 +131,12 @@ In deze stappen gaan we een nieuw ESP apparaat aan Home Assistant toevoegen, zod
 * Nu komen de sensor waarden op het standaard dashboard. Klik op **Overview** aan de linkerkant in het menu:
     ![Home Assistant overview met de sensorwaarden](images/mijn-sensor-op-dashboard.png)
 * Je kan de sensor waarden ook toevoegen aan een dashboard.
-    ![alt text](images/mijn-sensor-op-custom-dashboard.png)
+    ![Home Assistant custom dashboard met de sensorwaarden](images/mijn-sensor-op-custom-dashboard.png)
 * De sensor waarden zijn nu ook in Automations te gebruiken.
+* Je kan Device terug vinden onder **Settings** -> **Devices** -> **Configured** -> **ESPHome**
+    ![settings esphome devices](images/settings-esphome-devices.png)
+* Klik op je Sensor om gedetailleerde informatie te zien.
+    ![settings esphome device mijn sensor](images/settings-esphome-devices-mijn-sensor.png)
 
 # Links
 * Mocht het installeren van de ESP32 via USB niet werken staan hier wat tips: https://esphome.io/guides/faq.html#i-can-t-get-flashing-over-usb-to-work
