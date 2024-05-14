@@ -10,13 +10,13 @@ Er zijn 4 NUCs die elke een Home Assistant hosten.
     * Groep 2: http://ha2.local:8123
     * Groep 3: http://ha3.local:8123
     * Groep 4: http://ha4.local:8123
-* De gebruikersnaam is admin, het wachtwoord is admin of het gebruikersnaam en wachtwoord wat je op avond 4 ingesteld hebt.
+* De gebruikersnaam is admin, het wachtwoord is admin of gebruik het gebruikersnaam en wachtwoord wat je op avond 4 ingesteld hebt.
 
 # Opzetten van de ESPHome Add-On in Home Assistant
 
 *Dit hoeft maar één keer per Home Assistant omgeving gedaan worden*
 
-> [TIP!]
+> [!TIP]
 > Add-ons zijn uitbreidingen die extra functionaliteiten aan Home Assistant toevoegen, zoals mediaspelers of andere software, maar ook andere protocollen om met meer verschillende slimme apparaten te verbinden.
 >
 > Add-ons alleen beschikbaar in de installatie methoden HA OS en Supervised (bijvoorbeeld op een NUC of Raspberry Pi), niet met enkel de Container of Core.
@@ -33,7 +33,7 @@ Er zijn 4 NUCs die elke een Home Assistant hosten.
 
 In deze stappen gaan we een nieuw ESP apparaat aan Home Assistant toevoegen, zodat Home Assistant het apparaat kan aansturen en uitlezen. Deze basis stappen zijn voor alle ESP apparaten hetzelfde.
 
-> [TIP!]
+> [!TIP]
 > Er zijn verschillende manieren om via ESPHome een ESP apparaat te installeren:
 >
 > * Installatie over USB via de [ESPHome webpagina](https://web.esphome.io/). Hiervoor moet je Chrome of Edge gebruiken.
