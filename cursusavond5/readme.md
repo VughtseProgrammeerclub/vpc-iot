@@ -138,6 +138,54 @@ In deze stappen gaan we een nieuw ESP apparaat aan Home Assistant toevoegen, zod
 * Klik op je Sensor om gedetailleerde informatie te zien.
     ![settings esphome device mijn sensor](images/settings-esphome-devices-mijn-sensor.png)
 
+# Relais schakelen
+
+> [!CAUTION]
+> Bij deze opdracht werken we met 230 Volt wisselspanning. Dit kan leiden tot een schok. Werk nooit aan apparatuur of opstellingen die onder spanning staan. Volg daarom de volgende richtlijnen:
+> 
+> * Laat je werk controleren voordat je je project inplugt. We kijken of de aansluitingen goed zitten en metalen delen elkaar niet raken.
+> * Leg na goedkeuring het deksel op de kabeldoos, om aanraking met spanningsvoerende delen te beperken. Steek nu pas de stekker in het contact.
+> * Maak je wijzigingen: schakel altijd eerst de spanning uit! Haal de stekker uit het stopcontact en trek je snoer naar je toe, zodat niet iemand anders hem per ongeluk inplugt als je bezig bent.
+
+* We gebruiken [dezelfde aansluiting voor het relais als op avond 3](../cursusavond3/1-stekkerdoos-via-relais-schakelen-met-de-raspberry-pi-pico-w.md#aansluiten), maar dan met de MakePico in plaats van de Raspberry Pi Pico W. De draden moeten precies hetzelfde aangesloten worden.
+    ![MakePico aangesloten op het relais](images/mijn-schakelaar-aansluiting.png)
+* Open de **ESPHome** tab in Home Assistant. **Edit** de configuratie van je sensor. Verwijder het `sensor` block met configuratie en voeg de volgende configuratie toe. Bij de MakePico zit GPIO27 waar bij de Raspberry Pi Pico W GPIO15 zit.
+    ```yaml
+    switch:
+    - platform: gpio
+      name: "Relay"
+      pin: GPIO27
+    ```
+
+    ![ESP32 geconfigureerd als schakelaar](images/mijn-schakelaar-configuratie.png)]
+* Installeer de configuratie op de ESP32. Voor screenshots, zie de stappen onder [DHT22 sensor waarden uitlezen](#dht22-sensor-waarden-uitlezen):
+    * Klik rechtsboven op **Install**. Er wordt gevraagd hoe je de sensor wil installeren. Kies hier voor **Manual Download**.
+    * Het ESP32 programma wordt gegenereerd aan de hand van de configuratie. Dit kan twee minuten duren, waarna dit scherm getoond wordt. Download de **Modern format**.
+    * Omdat de bestandsextensie `.bin` is, vindt Chrome het een eng bestand. Selecteer **Keep** om de download toch op te slaan.
+    * Ga in een nieuw tabblad in je browser naar https://web.esphome.io en selecteer **Connect**.
+    * De browser vraagt nu met welk USB apparaat je wil verbinden. Selecteer de **USB Serial**.
+    * Als de verbinding succesvol is, dan zie je dit scherm. Selecteer **Install**.
+    * Selecteer de file met de `.bin` extensie die je gedownload hebt.
+    * Klik op **Install**.
+    * De huidige ESP32 programma wordt verwijderd voordat het nieuwe programma erop gezet wordt.
+    * Het nieuwe ESP32 programma wordt erop gezet wordt. Dit kan twee minuten duren.
+    * Als de installatie voltooid is zie je dit scherm. Klik op **Close**.
+* Ga in Home Assistant naar **Settings** -> **Devices** -> **Configured** -> **ESPHome**
+    ![settings esphome devices](images/mijn-schakelaar-4-entities.png)
+* Bij jouw device zullen nu 4 entities te zien zijn, waar er eerst 3 waren. Home Assistant heeft nog de temperatuur en luchtvochtigheid van de vorige opdracht onthouden, maar die zijn nu niet meer beschikbaar. Klik op de nieuw erbij gekomen **Mijn Sensor Relay**.
+    ![sensor entities](images/mijn-schakelaar-entities.png)
+* Hier kun je nu het relais aan en uit zetten. Test eerst de werking zonder de stekkerdoos in te pluggen. Het relais zou al moeten schakelen en een groen lampje geven.
+    ![mijn sensor relais controller](images/mijn-schakelaar-relay.png)
+* Op de **ESPHome** tab, kun je ook het aan en uit zetten van het relais terug zien in de **Logs**
+    ![logs van het schakelen van het relais](images/mijn-schakelaar-logs.png)
+* **Laat je opstelling controleren door de begeleiding.**
+* Verwijder de USB kabel.
+* Plug de stekkerdoos in. De ESP32 gaat nu opstarten en maakt binnen een minuut weer verbinding met Home Assistant.
+* Controleer of je nu via Wifi het relais aan en uit kan schakelen.
+    ![relais schakelt aan en uit](images/mijn-schakelaar-aan-uit.gif)
+
+# Meerdere sensoren en schakelaars
+Je kan meerdere sensoren en schakelaars met een enkele esp32 aansturen. Dat is een kwestie van meerdere entries onder `sensor` en `switch` aanmaken in de configuratie. Combineer de vorige twee opdrachten en probeer eens zowel de dht22 als het relais aan te sturen.
 
 # ESPHome en de Raspberry Pi Pico W
 
