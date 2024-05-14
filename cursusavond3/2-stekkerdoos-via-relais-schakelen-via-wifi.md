@@ -97,7 +97,7 @@ We beginnen met de code van de webserver die we gemaakt hebben in de opdracht [M
 
 9. Test het programma zonder de stekker er in te steken! Voer het programma uit door op de groene play knop te klikken. Open een webbrowser (Edge, Chrome of Firefox) en ga naar het gerapporteerde IP adres. Als het goed is zie je nu de webpagina met twee knoppen en de status van de stekkerdoos. Test de werking van de knoppen. Je moet het relais horen klikken.
 
-> [TIP!]
+> [!TIP]
 > Als een device binnen een bepaalde tijd opnieuw bij een wifi netwerk verbindt, krijgt het hetzelfde IP adres als het eerst had. Gaat er echter te veel tijd overheen en is de zogenaamde DHCP lease verlopen, dan kan het zijn dat het device een ander IP krijgt. Als het device geen display heeft, zoals onze stekkerdoos, dan kunnen we niet zien wat het IP is. In dat geval moet je een vast IP adres instellen. Voor deze opdracht is dat echter niet nodig.
 
 10. Hernoem je programma nu naar `main.py`.
