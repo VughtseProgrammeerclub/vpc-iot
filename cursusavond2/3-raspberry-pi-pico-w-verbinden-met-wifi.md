@@ -83,15 +83,15 @@ Om verbinding te maken met een WiFi-netwerk, moet je de service set identifier (
         print(f"Actuele buiten temperatuur in Vught op 2 meter hoogte: {buiten_temperatuur}°C")
     ```
 
-    > [!TIP]
-    > Een **API (Application Programming Interface)** is een set regels en protocollen waarmee verschillende softwaretoepassingen met elkaar kunnen communiceren. Het fungeert als een brug tussen verschillende systemen, waardoor ze gegevens kunnen uitwisselen en taken kunnen uitvoeren. API’s stellen ontwikkelaars in staat om functionaliteit van andere software of services te gebruiken zonder de interne werking te kennen. Ze zijn essentieel voor moderne applicaties en websites.
-    > 
-    > Wij maken hier gebruik van de gratis Open Meteo API die een antwoord geeft in het JSON (JavaScript Object Notation) formaat. JSON is een gestandaardiseerd tekstgebaseerd formaat voor het representeren van gestructureerde gegevens op basis van JavaScript-objectnotatie.
-    
-    > [!TIP]
-    > De coördinaten van Vught zijn 51.6533 N bij 5.2943 E:
-    >
-    > ![Coördinaten van Vught](images/vught-coordinaten.png)
+> [!TIP]
+> Een **API (Application Programming Interface)** is een set regels en protocollen waarmee verschillende softwaretoepassingen met elkaar kunnen communiceren. Het fungeert als een brug tussen verschillende systemen, waardoor ze gegevens kunnen uitwisselen en taken kunnen uitvoeren. API’s stellen ontwikkelaars in staat om functionaliteit van andere software of services te gebruiken zonder de interne werking te kennen. Ze zijn essentieel voor moderne applicaties en websites.
+> 
+> Wij maken hier gebruik van de gratis Open Meteo API die een antwoord geeft in het JSON (JavaScript Object Notation) formaat. JSON is een gestandaardiseerd tekstgebaseerd formaat voor het representeren van gestructureerde gegevens op basis van JavaScript-objectnotatie.
+
+> [!TIP]
+> De coördinaten van Vught zijn 51.6533 N bij 5.2943 E:
+>
+> ![Coördinaten van Vught](images/vught-coordinaten.png)
 
 9. Voer het programma uit. Als alles goed gaat krijg je de huidige buitentemperatuur te zien die de Raspberry Pi Pico W opgehaald heeft via de Wifi verbinding die je opgezet hebt.
 

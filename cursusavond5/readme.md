@@ -44,8 +44,8 @@ In deze stappen gaan we een nieuw ESP apparaat aan Home Assistant toevoegen, zod
 * Klik op **New Device**.
     ![ESPHome tab in Home Assisstant](images/esphome-tab.png)
 * Deze melding geeft aan dat het niet mogelijk is om direct vanuit Home Assistant je configuratie te installeren over USB. Dit is geen probleem voor nu, dus selecteer **Continue**
-    > [!TIP]
-    > Mocht je je Home Assistant wel via HTTPS open hebben, bijvoorbeeld omdat je het via NabuCasa of een andere manier opengesteld hebt naar het internet, dan kun je wel direct vanuit Home Assistant je configuratie installeren.
+> [!TIP]
+> Mocht je je Home Assistant wel via HTTPS open hebben, bijvoorbeeld omdat je het via NabuCasa of een andere manier opengesteld hebt naar het internet, dan kun je wel direct vanuit Home Assistant je configuratie installeren.
     
     ![ESPHome add device](images/esphome-new-device.png)
 * Geef je configuratie een naam, bijvoorbeeld "Joep's temperatuursensor". De voorbeelden gebruiken "Mijn Sensor".
@@ -59,9 +59,9 @@ In deze stappen gaan we een nieuw ESP apparaat aan Home Assistant toevoegen, zod
 * Op de **ESPHome** pagina in HomeAssistant, klik op **Edit** van je ESP apparaat, te herkennen aan de naam die je het in de vorige stappen hebt gegeven. In deze voorbeelden het het Mijn Sensor.
     ![alt text](images/mijn-sensor-edit.png)
 * Dit opent de configuratie pagina.
-    > [!TIP]
-    > De configuratie is in het YAML formaat. YAML staat voor: YAML Ain't Markup Language™. Het is een mens-vriendelijke data taal geschikt voor alle programmertalen. Let op dat YAML net als Python gevoelig is voor inspringing en juist gebruik van aanhalingstekens.
-    ![alt text](images/mijn-sensor-configuratie.png)
+> [!TIP]
+> De configuratie is in het YAML formaat. YAML staat voor: YAML Ain't Markup Language™. Het is een mens-vriendelijke data taal geschikt voor alle programmertalen. Let op dat YAML net als Python gevoelig is voor inspringing en juist gebruik van aanhalingstekens.
+![alt text](images/mijn-sensor-configuratie.png)
 * De configuratie bevat standaard de volgende ingestelde waarden:
     * De technische naam (geen spaties toegestaan).
     * De leesbare naam.
