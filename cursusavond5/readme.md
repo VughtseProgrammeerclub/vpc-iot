@@ -185,7 +185,7 @@ In deze stappen gaan we een nieuw ESP apparaat aan Home Assistant toevoegen, zod
     ![relais schakelt aan en uit](images/mijn-schakelaar-aan-uit.gif)
 
 # Meerdere sensoren en schakelaars
-Je kan meerdere sensoren en schakelaars met een enkele esp32 aansturen. Dat is een kwestie van meerdere entries onder `sensor` en `switch` aanmaken in de configuratie. Combineer de vorige twee opdrachten en probeer eens zowel de dht22 als het relais aan te sturen.
+Je kan meerdere sensoren en schakelaars met een enkele esp32 aansturen. Dat is een kwestie van meerdere entries onder `sensor` en `switch` aanmaken in de configuratie. Combineer de vorige twee opdrachten en probeer eens zowel de dht22 sensor uit te lezen als het relais aan te sturen.
 
 # ESPHome en de Raspberry Pi Pico W
 
@@ -194,3 +194,25 @@ ESPHome is ook bezig met support voor de Raspberry Pi Pico W. Helaas is ten tijd
 # Links
 * Mocht het installeren van de ESP32 via USB niet werken staan hier wat tips: https://esphome.io/guides/faq.html#i-can-t-get-flashing-over-usb-to-work
 * [Datasheet van de MakePico](datasheets/esp32-D0WDQ6_datasheet_en.pdf)
+
+# Verslag cursusavond 5
+We hadden een aantal afmeldingen, waardoor we met 15 personen aanwezig waren deze avond. In een korte introductie presentatie werd het doel van de avond uitgelegd en de volgende informatie gegeven. 
+
+## De verschillen tussen de Raspberry Pi Pico W en de ESP32 MakePico
+De Raspberry Pi Pico W is gebaseerd op de RP2040 microcontroller en wordt geprogrammeerd in Python. 
+De form factor is hetzelfde, dus we kunnen makkelijk de Pi Pico verwisselen in onze gemaakte projecten voor de ESP32 MakePico. De pinnen komen gedeeltelijk overeen (VCC, GND en VBUS zitten bijvoorbeeld op dezelfde plek), maar de nummering van de GPIO pinnen is anders, dus je moet je code aanpassen.
+
+## Software programmeren of configureren
+Op cursusavond 2 en 3 hebben we geprogrammeerd. Hierbij hebben we stap voor stap beschreven wat de microcontroller moest doen (verbind met de sensor, lees de waarden uit, print de waarden of laat ze op een website zien). Deze manier van werken noemen we Imperatief.
+
+Je kan software ook configureren. Hierbij schrijf je je gewenste situatie op in een configuratiebestand. Een tool zoals ESPHome zet deze configuratie om in een programma wat doet wat je beschreven hebt. In het voorbeeld van de sensor: op pin X zit een sensor, haal deze waarden elke 10 seconden op. Deze manier van werken noemen we Declaratief.
+
+Het voordeel van software configureren is dat er geen programmeerkennis nodig is. Je maakt gebruik van een tool die door anderen gemaakt is en hoeft dus zelf geen code te schrijven en onderhouden. Het nadeel is dat je beperkt bent tot wat het gebruikte programma aan configuratiemogelijkheden aanbiedt. Wil je iets anders, dan zul je toch zelf moeten programmeren.
+
+## De praktijk
+
+Na de presentatie zijn we aan de slag gegaan met het configureren van ESPHome in Home Assistant. Wat opviel is dat het genereren van de programma code met ESPHome in Home Assistant tussen de 1-2 minuten duurt en daarna het installeren van het programma kan ook 2 minuten duren. Deze feedback loop is veel langer dan wanneer we programmeerden met Thonny. Maar er zijn minder iteraties nodig om een werkend programma te krijgen.
+
+Het is velen gelukt om de sensor data van hun eigen sensor in Home Assistant te krijgen en weer te geven op een dashboard. Enkelen hebben daarna ook nog het relais in Home Assistant gekregen. Als je eenmaal de sensor werkend hebt, dan is het relais maar een kleine volgende stap.
+
+Er werd aan het eind nog een vraag gesteld over MQTT. MQTT wordt behandeld als onderdeel van het uitlezen van de slimme meter via de P1 poort op de volgende cursusavond op 28 mei om 20:00.

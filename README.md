@@ -3,7 +3,7 @@
 Dit is het programma van de cursus Smart Home van de Vughtse Programmeerclub.
 
 ## 1. Presentatie Internet of Things in een Smart Home (6 februari):
-**[Verslag cursus avond 1](cursusavond1/readme.md)**
+**[Verslag cursus avond 1](cursusavond1/readme.md#verslag-cursusavond-1)**
 * Introductie Internet of Things
 * Introductie Smart Home
 	* Inputs: knoppen, sensoren, voice assistent, telefoon, APIs
@@ -16,9 +16,9 @@ Dit is het programma van de cursus Smart Home van de Vughtse Programmeerclub.
 * Introductie microPython + Thonny
 
 ## 2+3. Zelf IoT programmeren (2 sessies: 20 februari en 5 maart)
-**[Verslag cursus avond 2](cursusavond2/readme.md)**
+**[Verslag cursus avond 2](cursusavond2/readme.md#verslag-cursusavond-2)**
 
-**[Verslag cursus avond 3](cursusavond3/readme.md)**
+**[Verslag cursus avond 3](cursusavond3/readme.md#verslag-cursusavond-3)**
 * Introductie microPython + Thonny
 * Uitlezen temperatuursensor
 * Verbinden met het Wifi
@@ -27,12 +27,16 @@ Dit is het programma van de cursus Smart Home van de Vughtse Programmeerclub.
 * Relais schakelen
 
 ## 4. Home assistant (2 april)
+**[Verslag cursus avond 4](cursusavond4/readme.md#verslag-cursusavond-4)**
+
 * Introductie Home Assistant
 * Instellen van inputs en outputs
 * Triggers, conditions en actions
 * Scenes en Blueprints
 
 ## 5. ESPs programmeren voor Home Assistant (14 mei)
+**[Verslag cursus avond 5](cursusavond5/readme.md#verslag-cursusavond-5)**
+
 * Temperatuur sensor
 * Relais schakelen
 * CO2 sensor
