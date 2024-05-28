@@ -73,10 +73,10 @@ Er zijn 4 NUCs die elke een Home Assistant hosten.
 
 Home Assistant is nu klaar voor MQTT.
 
-## ESP32 configureren
+## ESP32 programmeren
 1. Download de code als ZIP van het [MicroPython p1 meter](https://github.com/Josverl/micropython-p1meter/) project op GitHub
     ![alt text](images/esp32-download-code.png). Pak hem uit op je computer.
-2. Sluit de MakePico aan op je computer
+2. Houd de "bootsel" knop op de MakePico ingedrukt en sluit de MakePico aan op je computer.
 3. Open de `src` map in de uitgepakte zip in Thonny
     ![alt text](images/esp32-thonny.png)
 4. **Configureer de interpreter**
