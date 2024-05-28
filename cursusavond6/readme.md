@@ -29,9 +29,9 @@ MQTT heeft een broker nodig, een applicatie die de gepubliceerde berichten naar 
 Er zijn 4 NUCs die elke een Home Assistant hosten.
 * Maak verbinding met het netwerk HomeAssistant, wachtwoord 12345678
 * Gebruik de volgend links om bij HomeAssistant te komen:
-    * Groep 1 & 2: http://ha2.local:8123
-    * Groep 3: http://ha3.local:8123
-    * Groep 4: http://ha4.local:8123
+    * http://ha2.local:8123
+    * http://ha3.local:8123
+    * http://ha4.local:8123
 * De gebruikersnaam is admin, het wachtwoord is admin of gebruik het gebruikersnaam en wachtwoord wat je op avond 4 ingesteld hebt.
 
 ### Installeer de Mosquitto broker addon
