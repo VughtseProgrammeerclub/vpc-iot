@@ -121,10 +121,3 @@ Home Assistant is nu klaar voor MQTT.
     ![alt text](images/mqtt-explorer-connect.png)
 3. Alle topics worden weergegeven
     ![alt text](images/mqtt-explorer.png)
-
-
-Presentatie:
-Protocollen: Fabrikant specifiek, Matter, MQTT
-GitHub
-P1: direct USB of ESP32 of HomeWizard
-MicroPython -> ESP32
