@@ -17,6 +17,7 @@ Voor dit project heb je nodig:
     * Groen naar GND
     * Zwart met de 1k Ohm weerstand ertussen naar GP15. De weerstand kun je in het breadboard steken.
 ![makepico esp32 aangesloten op de RJ12 stekker](images/makepico-p1-connected.png)
+![makepico esp32 pinout](../cursusavond5/images/makepico-pinout.png)
 
 ## Home Assistant voorbereiden voor MQTT
 
